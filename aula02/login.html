@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form method="POST" action="bem_vindo.html">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        maxlength="20"
+        minlength="5"
+        required
+      /><br /><br />
+
+      <label for="senha">Senha</label>
+      <input type="password" name="senha" id="senha" required /><br /><br />
+
+      <label for="nome">Lembre-me</label>
+      <input type="checkbox" value="lembrar_senha" name="lembrar" /><br /><br />
+
+      <input type="submit" value="Enviar" />
+      <br /><br />
+      <a href="enviar_email.html"> Esqueceu sua senha?</a>
+    </form>
+  </body>
+</html>
