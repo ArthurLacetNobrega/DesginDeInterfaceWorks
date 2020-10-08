@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+
+        <table border="1">
+            <tr>
+                <th colspan="5">Cálculo do parcelamento</th>
+            </tr>
+            <tr>
+                <td>Preço a vista<input type="text" name="valor" id="valor"></td>
+                <td>Número de parcelas<input type="text" name="parc" id="parc"></td>
+                <td><input type="button" value="Calcular parcelas" onclick="calcular();"></td>
+                <td>O valor da parcela é: <input type="text" name="result" id="result"></td>
+            </tr>
+        </table>
+
+    </form>
+
+    <script>
+
+        function calcular(){
+            let valor = parseInt(document.getElementById("valor").value);
+            let parc = parseInt(document.getElementById("parc").value);
+            let result = document.getElementById("result");
+
+            if (parc == 1 || parc == 2) result.value = valor / parc;
+            if (parc == 3 || parc == 4) result.value = (valor + (valor/10)) / parc;
+            if (parc >= 5) result.value = (valor + (valor/5)) / parc;
+            
+            
+        }
+    </script>
+    
+</body>
+</html>

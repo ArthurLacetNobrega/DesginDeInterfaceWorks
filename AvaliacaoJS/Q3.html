@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=v, initial-scale=1.0">
+    <title>Cálculo com condicional</title>
+</head>
+<body>
+    <form action="">
+
+        <table border="1">
+            <tr>
+                <th colspan="5">Cálculo com condicional</th>
+            </tr>
+            <tr>
+                <td>Valor A <input type="text" name="val1" id="val1"></td>
+                <td>Valor B <input type="text" name="val2" id="val2"></td>
+                <td><input type="button" value="=" onclick="calcular();"></td>
+                <td>O valor C é: <input type="text" name="result" id="result"></td>
+            </tr>
+        </table>
+
+    </form>
+
+    <script>
+
+        function calcular(){
+            let valA = parseInt(document.getElementById("val1").value);
+            let valB = parseInt(document.getElementById("val2").value);
+            let result = document.getElementById("result");
+
+            if (valA == valB) result.value = valA + valB;
+            if (valA != valB) result.value = valA * valB;
+            
+            
+        }
+    </script>
+</body>
+</html>

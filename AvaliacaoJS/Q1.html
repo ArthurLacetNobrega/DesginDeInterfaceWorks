@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de média Aritimética</title>
+</head>
+<body>
+    <form action="">
+
+        <table border="1">
+            <tr>
+                <th colspan="5">Média Aritimética</th>
+            </tr>
+            <tr>
+                <td>Valor 1 <input type="text" name="val1" id="val1"></td>
+                <td>Valor 2 <input type="text" name="val2" id="val2"></td>
+                <td>Valor 3 <input type="text" name="val3" id="val3"></td>
+                <td><input type="button" value="=" onclick="calcular();"></td>
+                <td><input type="text" name="result" id="result"></td>
+            </tr>
+        </table>
+
+    </form>
+
+    <script>
+
+        function calcular(){
+            let val1 = parseFloat(document.getElementById("val1").value);
+            let val2 = parseFloat(document.getElementById("val2").value);
+            let val3 = parseFloat(document.getElementById("val3").value);
+            let result = document.getElementById("result");
+
+            result.value = (val1 + val2 + val3)/3;
+            
+            
+        }
+    </script>
+</body>
+</html>

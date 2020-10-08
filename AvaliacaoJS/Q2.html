@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de aumento salarial</title>
+</head>
+<body>
+    <form action="">
+
+        <table border="1">
+            <tr>
+                <th colspan="5">Cálculo de aumento de 10%</th>
+            </tr>
+            <tr>
+                <td>Nome <input type="text" name="nome" id="nome"></td>
+                <td>Salário <input type="text" name="sal" id="sal"></td>
+                <td><input type="button" value="Calcular o aumento" onclick="calcular();"></td>
+                <td>Novo Salário é: <input type="text" name="result" id="result"></td>
+            </tr>
+        </table>
+
+    </form>
+
+    <script>
+
+        function calcular(){
+            let sal = parseInt(document.getElementById("sal").value);
+            let result = document.getElementById("result");
+
+            result.value = sal + (sal/10);
+            
+            
+        }
+    </script>
+</body>
+</html>

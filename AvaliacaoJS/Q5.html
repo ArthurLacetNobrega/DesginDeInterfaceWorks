@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da média</title>
+</head>
+<body>
+    <form action="">
+
+       
+
+        <table border="1">
+            <tr>
+                <th colspan="5">Cáculo da média</th>
+            </tr>
+            <tr>
+                <td>Nome <input type="text" name="nome" id="nome"></td>
+                <td>Nota 1 <input type="text" name="val1" id="val1"></td>
+                <td>Nota 2 <input type="text" name="val2" id="val2"></td>
+                <td>Nota 3 <input type="text" name="val3" id="val3"></td>
+                <td><input type="button" value="Média é: " onclick="calcular()"></td>
+                <td><input type="text" name="result" id="result"></td>
+            </tr>
+        </table>
+     
+    </form>
+
+    
+
+    <script>
+
+        function alerta(nome, media) {
+            if(media >=8){
+                alert("O aluno " + nome + "foi aprovado com a média: " + media)
+            }else{
+                alert("O aluno " + nome + "foi reprovado com a média: " + media)
+            }
+        }
+
+        function calcular(){
+            let val1 = parseFloat(document.getElementById("val1").value);
+            let val2 = parseFloat(document.getElementById("val2").value);
+            let val3 = parseFloat(document.getElementById("val3").value);
+            let nome = document.getElementById("nome").value
+                
+            var result  = (val1 + val2 + val3)/3;
+
+            document.getElementById('result').value = result
+
+            alerta(nome, result)            
+            
+        }
+    </script>
+</body>
+</html>
