@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Cálculo de aumento salarial</title>
 </head>
 <body>
     <form action="">
 
-        <table border="1">
+        <table border="1" class="container">
             <tr>
                 <th colspan="5">Cálculo de aumento de 10%</th>
             </tr>
             <tr>
                 <td>Nome <input type="text" name="nome" id="nome"></td>
                 <td>Salário <input type="text" name="sal" id="sal"></td>
-                <td><input type="button" value="Calcular o aumento" onclick="calcular();"></td>
+                <td><input type="button" class="btn btn-primary" value="Calcular o aumento" onclick="calcular();"></td>
                 <td>Novo Salário é: <input type="text" name="result" id="result"></td>
             </tr>
         </table>

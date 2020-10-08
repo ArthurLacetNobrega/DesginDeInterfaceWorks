@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Simulação de parcelamento</title>
 </head>
 <body>
 
     <form action="">
 
-        <table border="1">
+        <table border="1" class="container">
             <tr>
                 <th colspan="5">Cálculo do parcelamento</th>
             </tr>
             <tr>
                 <td>Preço a vista<input type="text" name="valor" id="valor"></td>
                 <td>Número de parcelas<input type="text" name="parc" id="parc"></td>
-                <td><input type="button" value="Calcular parcelas" onclick="calcular();"></td>
+                <td><input type="button" class="btn btn-primary" value="Calcular parcelas" onclick="calcular();"></td>
                 <td>O valor da parcela é: <input type="text" name="result" id="result"></td>
+                <td>E o total é <input type="text" name="total" id="total"></td>
             </tr>
         </table>
 
@@ -29,10 +31,20 @@
             let valor = parseInt(document.getElementById("valor").value);
             let parc = parseInt(document.getElementById("parc").value);
             let result = document.getElementById("result");
+            let total = document.getElementById("total");
 
-            if (parc == 1 || parc == 2) result.value = valor / parc;
-            if (parc == 3 || parc == 4) result.value = (valor + (valor/10)) / parc;
-            if (parc >= 5) result.value = (valor + (valor/5)) / parc;
+            if (parc == 1 || parc == 2){
+                result.value = valor / parc;
+                total.value = valor;
+            }  
+            if (parc == 3 || parc == 4) {
+                result.value = (valor * 1.1) / parc;
+                total.value = valor * 1.1;
+                }
+            if (parc >= 5) {
+                result.value = (valor + (valor/5)) / parc;
+                total.value = valor * 1.2;
+            }
             
             
         }

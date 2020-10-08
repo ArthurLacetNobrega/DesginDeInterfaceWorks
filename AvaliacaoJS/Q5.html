@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Cálculo da média</title>
 </head>
 <body>
@@ -10,7 +11,7 @@
 
        
 
-        <table border="1">
+        <table border="1" class="container">
             <tr>
                 <th colspan="5">Cáculo da média</th>
             </tr>
@@ -19,8 +20,8 @@
                 <td>Nota 1 <input type="text" name="val1" id="val1"></td>
                 <td>Nota 2 <input type="text" name="val2" id="val2"></td>
                 <td>Nota 3 <input type="text" name="val3" id="val3"></td>
-                <td><input type="button" value="Média é: " onclick="calcular()"></td>
-                <td><input type="text" name="result" id="result"></td>
+                <td><input type="button" class="btn btn-primary" value="Calcular média " onclick="calcular()"></td>
+                <td>A média é:<input type="text" name="result" id="result"></td>
             </tr>
         </table>
      
